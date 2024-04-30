@@ -1,7 +1,6 @@
 const cron = require('node-cron');
 const knex = require('./services/knex');
 const fetchData = require('./services/fetchDataAPI');
-const date = require('./services/today');
 
 console.log('Aguardando inicio da aplicação...');
 

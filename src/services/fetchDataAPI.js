@@ -1,9 +1,6 @@
 const axios = require('axios');
 const date = require('./today');
-const ProgressBar = require('progress');
 const insertDB = require('./insertDB');
-
-let bar;
 
 const fetchData = async (registros_inicio, allData = []) => {
 
@@ -36,20 +33,8 @@ const fetchData = async (registros_inicio, allData = []) => {
     return;
   };
 
-  // if (!bar) {
-  //   bar = new ProgressBar(`:current/:total (:percent) [:bar] :rate/bps :etas`, {
-  //     complete: '=',
-  //     incomplete: ' ',
-  //     width: 20,
-  //     total: totalRegistros
-  //   });
-  // }
-
   // Adiciona os dados da resposta ao array
   allData = allData.concat(response.data.dados);
-
-  // Atualiza a barra de progresso para cada item retornado
-  // response.data.dados.forEach(() => bar.tick());
 
   // Verifica se existem mais dados para buscar
   if (response.data.qtd_total_resultados > allData.length) {
