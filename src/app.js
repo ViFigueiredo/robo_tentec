@@ -5,7 +5,6 @@ const fetchData = require('./services/fetchDataAPI');
 console.log('Aguardando inicio da aplicação...');
 
 const exec = () => {
-  // console.log(knex.client.config);
   return knex.raw('SELECT 1+1 AS result')
     .then(() => {
       console.log('Conexão com o banco de dados estabelecida com sucesso.');
