@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const axios = require('axios');
 const date = require('./today');
 const insertDB = require('./insertDB');
@@ -8,13 +11,13 @@ const fetchData = async (registros_inicio, allData = []) => {
 
   const data = {
     autenticacao: {
-      usuario: '47012641',
-      senha: '@47012641#'
+      usuario: process.env.TENTEC_USER,
+      senha: process.env.TENTEC_PWD
     },
     acao: 'cdr_detalhes',
     conta_voip: '',
-    data_inicio: '26/04/2024' + ' 18:00:00',
-    data_fim: '26/04/2024' + ' 19:00:00',
+    data_inicio: date() + ' 08:00:00',
+    data_fim: date() + ' 20:00:00',
     cliente_id: '',
     numero_destino: '',
     nomeDisplay: '',
