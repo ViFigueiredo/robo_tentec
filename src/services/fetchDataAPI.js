@@ -17,7 +17,7 @@ const fetchData = async (registros_inicio, allData = []) => {
     acao: 'cdr_detalhes',
     conta_voip: '',
     data_inicio: date() + ' 08:00:00',
-    data_fim: date() + ' 20:00:00',
+    data_fim: date() + ' 21:00:00',
     cliente_id: '',
     numero_destino: '',
     nomeDisplay: '',

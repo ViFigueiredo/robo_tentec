@@ -14,7 +14,7 @@ const insertDB = async (data) => {
   await knex.transaction(async trx => {
     for (const obj of data) {
       try {
-        await trx('chamadas').insert(obj)
+        await trx(process.env.DATABASE_TABLE).insert(obj)
           .then(() => {
 
             // incrementa a barra de progresso

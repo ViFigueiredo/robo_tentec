@@ -19,5 +19,5 @@ const exec = () => {
 }
 
 // exec()
-cron.schedule('00 21 * * *', () => { exec() });
+cron.schedule('32 11 * * *', () => { exec() });
 
